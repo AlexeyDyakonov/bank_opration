@@ -8,7 +8,6 @@ from src.functions import (read_json,
                            )
 
 
-
 def main():
     list_operations = read_json(OPERATIONS_PATH)
     executed_operations = get_executed_operations(list_operations)
@@ -20,11 +19,7 @@ def main():
               f"{convert_payment(operation['from'])} -> {convert_payment(operation['to'])}\n"
               f"{operation['operationAmount']['amount']} {operation['operationAmount']['currency']['name']}\n"
               )
-    test_datе = [
-        {"date": "2018-08-19T04:27:37.904916"},
-        {"date": "2018-07-11T02:26:18.671407"},
-        {"date": "2019-09-11T17:30:34.445824"}]
-    print(sort_operations(test_datе))
+
 
 if __name__ == '__main__':
     main()
